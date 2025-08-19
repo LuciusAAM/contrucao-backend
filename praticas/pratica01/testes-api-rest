@@ -1,0 +1,196 @@
+type: collection.insomnia.rest/5.0
+name: Testes da API REST
+meta:
+  id: wrk_aa3cb25171a3450d8a378540f5773e6f
+  created: 1755643517217
+  modified: 1755643908771
+  description: ""
+collection:
+  - url: http://localhost:3000/tarefas
+    name: Pratica01 - GET 1
+    meta:
+      id: req_4985cc0b3bfa42aa989d955c18f56117
+      created: 1755643517347
+      modified: 1755644595138
+      isPrivate: false
+      description: ""
+      sortKey: -1755643517347
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas/2d29
+    name: Pratica01 - POST
+    meta:
+      id: req_86e6f8d7aa0f46adb7577735ac75ae58
+      created: 1755644480992
+      modified: 1755644587675
+      isPrivate: false
+      description: ""
+      sortKey: -1755643517297
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+           "nome": "Estudar API REST",
+           "prioridade": 1,
+           "concluida": false
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas/2d29
+    name: Pratica01 - PUT - Atualizando campos
+    meta:
+      id: req_c622076cf73e4f028eecfa928883e077
+      created: 1755644487305
+      modified: 1755644832526
+      isPrivate: false
+      description: ""
+      sortKey: -1755643517247
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+           "nome": "Estudar API REST",
+           "prioridade": 2,
+           "concluida": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas/2d29
+    name: Pratica01 - PATCH - Atualizando um unico campo
+    meta:
+      id: req_e402523ffdbc496a98e50a277705723c
+      created: 1755644494412
+      modified: 1755644819596
+      isPrivate: false
+      description: ""
+      sortKey: -1755643517197
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |
+        {
+           "concluida": false
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas/2d29
+    name: Pratica01 - DELETE - Deletando o ID e elementos
+    meta:
+      id: req_f865e3ba2d35414c900ca49a6355c978
+      created: 1755644501160
+      modified: 1755644854152
+      isPrivate: false
+      description: ""
+      sortKey: -1755643517147
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas/2d29
+    name: Pratica01 - GET 2 - Verificar ID
+    meta:
+      id: req_6ee793af90c341f69173c0ccaac204aa
+      created: 1755644600439
+      modified: 1755644768996
+      isPrivate: false
+      description: ""
+      sortKey: -1755643517272
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas/1
+    name: Pratica01 - GET 3 Verificar ID ERROR
+    meta:
+      id: req_1733a00117ec403d9bee67144ed14cc7
+      created: 1755644632553
+      modified: 1755644783462
+      isPrivate: false
+      description: ""
+      sortKey: -1755643517259.5
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_a92fb2a2775c4ed1c96b657cd05c5b5ca5a4d1d7
+    created: 1755643517226
+    modified: 1755643517226
+environments:
+  name: Base Environment
+  meta:
+    id: env_a92fb2a2775c4ed1c96b657cd05c5b5ca5a4d1d7
+    created: 1755643517221
+    modified: 1755643517221
+    isPrivate: false
