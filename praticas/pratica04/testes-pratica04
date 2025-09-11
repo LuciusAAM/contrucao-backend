@@ -1,0 +1,197 @@
+type: collection.insomnia.rest/5.0
+name: Middleware de erro - Pratica04
+meta:
+  id: wrk_ab08e65517bc4cd28e04dcb243e095a5
+  created: 1756852339547
+  modified: 1757632064069
+  description: ""
+collection:
+  - url: http://localhost:3000/tarefas
+    name: Primeiro GET para testar
+    meta:
+      id: req_347b180ba20942e5af0fca8ef12c2506
+      created: 1757632114708
+      modified: 1757633058531
+      isPrivate: false
+      description: ""
+      sortKey: -1757632811779
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters:
+      - id: pair_7092895d4be34461b12985f157ddaa33
+        name: ""
+        value: ""
+        description: ""
+        disabled: false
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.5.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas
+    name: Aplicando um POST
+    meta:
+      id: req_e0c5776b5a314a9a81de475c4505ccef
+      created: 1757632811679
+      modified: 1757633291126
+      isPrivate: false
+      description: ""
+      sortKey: -1757632811679
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome": "Aplicando um POST",
+        	"concluida": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.5.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas
+    name: GET para verificar o POST
+    meta:
+      id: req_7c4daf6a04bd46158e5ae94bb8a14aa5
+      created: 1757633294854
+      modified: 1757633322206
+      isPrivate: false
+      description: ""
+      sortKey: -1757632811579
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.5.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas/3
+    name: Atualizando o POST com um PUT
+    meta:
+      id: req_d5f3a0db0d924e89bd23168bdf11e65a
+      created: 1757633325836
+      modified: 1757633412515
+      isPrivate: false
+      description: ""
+      sortKey: -1757632811479
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome": "Aplicando um PUT após o POST",
+        	"concluida": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.5.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas/3
+    name: DELETE NO tarefas/3, retornando 204
+    meta:
+      id: req_973a9fb0fc014280b59ac2497b79df36
+      created: 1757633439564
+      modified: 1757633477485
+      isPrivate: false
+      description: ""
+      sortKey: -1757632811379
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.5.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas3
+    name: Buscando tarefas/3 (Erro)
+    meta:
+      id: req_84e5e4e6efb64de2a0df05e6ff9eda7c
+      created: 1757633485889
+      modified: 1757633548150
+      isPrivate: false
+      description: ""
+      sortKey: -1757632811279
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.5.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas
+    name: Verificando PUT
+    meta:
+      id: req_24ba8026400c4dbd81dcb8a6de052006
+      created: 1757633576736
+      modified: 1757633619623
+      isPrivate: false
+      description: ""
+      sortKey: -1757632811429
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.5.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_02bd01a301317a0d820b25daafd6f378fa426a06
+    created: 1756852339556
+    modified: 1756852339556
+environments:
+  name: Base Environment
+  meta:
+    id: env_02bd01a301317a0d820b25daafd6f378fa426a06
+    created: 1756852339552
+    modified: 1756852339552
+    isPrivate: false
