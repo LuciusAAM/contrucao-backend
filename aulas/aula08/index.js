@@ -32,14 +32,12 @@ async function alterar(nomeTarefa, nomeAlterado, concluidaAlterado) {
   console.log(resultado);
 }
 
-
 async function remover(nomeTarefa) {
-    const db = await conecta();
-    const collection = db.collection("tarefas");
-    const resultado = await collection.deleteOne({ nome: nomeTarefa });
-    console.log(resultado);
-  }
-
+  const db = await conecta();
+  const collection = db.collection("tarefas");
+  const resultado = await collection.deleteOne({ nome: nomeTarefa });
+  console.log(resultado);
+}
 
 async function main() {
   while (true) {
@@ -62,11 +60,20 @@ async function main() {
         await buscar(nome);
         break;
       }
-      case 3:
-        break;
 
-      case 4:
+      case 3: {
+        const nomeBusca = readline.question("Informe o nome da tarefa: ");
+        const nome = readline.question("Informe o outro nome da tarefa: ");
+        const concluida = readline.question("Informe outra situacao para tarefa: ");
+        await alterar(nomeBusca, nome, concluida);
         break;
+      }
+
+      case 4: {
+        const nome = readline.question("Informe o nome da tarefa: ");
+        await remover(nome);
+        break;
+      }
 
       case 5:
         process.exit(0);
